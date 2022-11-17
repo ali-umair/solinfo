@@ -1,7 +1,8 @@
 import React from 'react'
 
 export default function Countdown() {
-  return (
+
+    return (
     <div className="min-w-screen min-h-screen bg-[#0E0E0E] flex items-center justify-center px-5 py-5" x-data="beer()" x-init="start()">
         <div className="text-yellow-100">
             <h1 className="text-3xl text-center mb-10 font-extralight">You will see something exciting</h1>
@@ -26,6 +27,7 @@ export default function Countdown() {
                 </div>
             </div>
         </div>
+        {/* <button onClick={seconds} className="bg-white">Click</button> */}
     </div>
   )
 }
