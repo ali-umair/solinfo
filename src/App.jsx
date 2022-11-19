@@ -1,11 +1,13 @@
 import reactLogo from './assets/react.svg'
-import Countdown from './components/Countdown'
+import Card from './components/Card'
 // import './App.css'
 
 function App() {
 
   return (
-    <Countdown />
+    <>
+    <Card />
+    </>
   )
 }
 
