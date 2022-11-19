@@ -26,7 +26,7 @@ export default function Card(props) {
                             </div>
                             <div>
                                 <div className="text-xs font-thin tracking-widest text-slate-500">Moons</div>
-                                <div className="text-xs font-bold tracking-widest text-slate-500">{props.data.moons.length}</div>
+                                <div className="text-xs font-bold tracking-widest text-slate-500">{props.data.moons ? props.data.moons.length : 0}</div>
                             </div>
                             <div>
                                 <div className="text-xs font-thin tracking-widest text-slate-500">Gravity</div>
