@@ -40,11 +40,11 @@ export default function Card(props) {
                     </div>
                 </div>
 
-                <a href="#">
-                    <div className="uppercase text-green-400 text-center rounded-b-md w-auto pt-8 pb-[30px] text-xs font-bold -mt-2 relative z-0 hover:cursor-pointer hover:text-green-600 hover:bg-green-200">
-                        Learn more about {props.data.englishName}
-                    </div>
-                </a>
+                    {/* <a href="#">
+                        <div className="uppercase text-green-400 text-center rounded-b-md w-auto pt-8 pb-[30px] text-xs font-bold -mt-2 relative z-0 hover:cursor-pointer hover:text-green-600 hover:bg-green-200">
+                            Learn more about {props.data.englishName}
+                        </div>
+                    </a> */}
             </div>
         </div>
     )
