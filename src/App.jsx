@@ -1,12 +1,9 @@
-import reactLogo from './assets/react.svg'
-import Countdown from './components/Countdown'
-// import './App.css'
+import { useState } from 'react';
+import Home from './components/Home';
 
-function App() {
+export default function App() {
 
   return (
-    <Countdown />
+    <Home />
   )
 }
-
-export default App
