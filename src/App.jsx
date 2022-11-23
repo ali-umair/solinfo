@@ -44,7 +44,8 @@ export default function App() {
   }
 
   return (
-    <Router>
+    <div className='bg-[#222327] min-h-screen flex flex-col justify-between'>
+      <Router>
       <Routes>
         <Route exact path="/" element={<Home body={Earth}/>} />
         <Route exact path="/about" element={<Home body={Mercury}/>} />
@@ -52,5 +53,6 @@ export default function App() {
       </Routes>
       <Navbar />
     </Router>
+    </div>
   )
 }
