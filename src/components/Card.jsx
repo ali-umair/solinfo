@@ -6,7 +6,7 @@ import React from 'react'
 export default function Card(props) {
     return (
         <div className="max-w-7xl px-4 py-2 my-2">
-            <div className="w-[300px] h-auto border-[3px] hover:border-green-400 rounded-xl shadow-xl duration-500 ease-in-out hover:shadow-2xl xl:ml-[5px]">
+            <div className="w-[300px] h-auto border-[3px] bg-white hover:border-green-400 rounded-xl shadow-xl duration-500 ease-in-out hover:shadow-2xl xl:ml-[5px]">
                 <div
                     className="border-b border-slate-200 bg-white rounded-md shadow-md relative z-10 divide-y divide-solid divide-gray-300 space-y-9">
                     <div>
@@ -40,11 +40,11 @@ export default function Card(props) {
                     </div>
                 </div>
 
-                <a href="#">
-                    <div className="uppercase text-green-400 text-center rounded-b-md w-auto pt-8 pb-[30px] text-xs font-bold -mt-2 relative z-0 hover:cursor-pointer hover:text-green-600 hover:bg-green-200">
-                        Learn more about {props.data.englishName}
-                    </div>
-                </a>
+                    <a href="#">
+                        <div className="uppercase text-green-400 text-center rounded-b-md w-auto pt-8 pb-[30px] text-xs font-bold -mt-2 relative z-0 hover:cursor-pointer hover:text-green-600 hover:bg-green-200">
+                            Learn more about {props.data.englishName}
+                        </div>
+                    </a>
             </div>
         </div>
     )

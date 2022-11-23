@@ -1,6 +1,7 @@
 import React from 'react';
 import { useEffect } from 'react';
-import './navbar.css'
+import './navbar.css';
+import { Link } from 'react-router-dom';
 
 export default function Navbar() {
 
@@ -16,24 +17,24 @@ export default function Navbar() {
     <div className="navigation">
         <ul>
             <li className="list active">
-                <a href="#">
+                <Link to="/">
                     <span className="icon"><ion-icon name="home-outline"></ion-icon></span>
                     <span className="text">Home</span>
-                </a>
+                </Link>
             </li>
 
             <li className="list">
-                <a href="#">
+                <Link to="about">
                     <span className="icon"><ion-icon name="person-outline"></ion-icon></span>
                     <span className="text">Profile</span>
-                </a>
+                </Link>
             </li>
 
             <li className="list">
-                <a href="#">
+                <Link to="users">
                     <span className="icon"><ion-icon name="chatbubble-outline"></ion-icon></span>
                     <span className="text">Message</span>
-                </a>
+                </Link>
             </li>
 
             <li className="list">

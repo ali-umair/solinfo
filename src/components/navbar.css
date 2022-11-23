@@ -13,6 +13,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 20px;
     min-height: 100vh;
     background-color: var(--clr);
   }
@@ -20,7 +21,7 @@
   .navigation {
     position: relative;
     height: 70px;
-    width: 400px;
+    width: 100vw;
     background: #fff;
     display: flex;
     justify-content: center;

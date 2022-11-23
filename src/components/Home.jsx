@@ -2,7 +2,7 @@ import React from 'react';
 import Card from './Card';
 import { useState } from 'react';
 
-export default function Home() {
+export default function Home(props) {
 
     const Earth = {
         "id": "terre",
@@ -50,7 +50,7 @@ export default function Home() {
   return (
     <div className='flex flex-col items-center'>
       <div className='w-[300px]'>
-            <select id="underline_select" defaultValue="Choose a planet" onChange={selectChange} className="block py-2.5 px-0 mt-3 mb-3 w-full text-sm text-slate-400 bg-transparent border-b-2 border-green-400 appearance-none focus:outline-none focus:ring-0 focus:border-green-400 peer">
+            <select id="underline_select" defaultValue="Choose a planet" className="block py-2.5 px-0 mt-3 mb-3 w-full text-sm text-slate-400 bg-transparent border-b-2 border-green-400 appearance-none focus:outline-none focus:ring-0 focus:border-green-400 peer">
                 <option value="Earth">Earth</option>
                 <option value="Mercury">Mercury</option>
                 <option value="Venus">Venus</option>
@@ -61,7 +61,7 @@ export default function Home() {
                 <option value="Neptune">Neptune</option>
             </select>
         </div>
-        <Card data={body}/>
+        <Card data={props.body}/>
     </div>
   )
 }
