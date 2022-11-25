@@ -1,6 +1,7 @@
 import React from 'react';
 import Card from './Card';
 import { useState } from 'react';
+import Select from './Select';
 
 export default function Home(props) {
 
@@ -49,18 +50,39 @@ export default function Home(props) {
 
   return (
     <div className='flex flex-col items-center'>
-      <div className='w-[300px]'>
-            <select id="underline_select" defaultValue="Choose a planet" className="block py-2.5 px-0 mt-3 mb-3 w-full text-sm text-slate-400 bg-transparent border-b-2 border-green-400 appearance-none focus:outline-none focus:ring-0 focus:border-green-400 peer">
-                <option value="Earth">Earth</option>
-                <option value="Mercury">Mercury</option>
-                <option value="Venus">Venus</option>
-                <option value="Mars">Mars</option>
-                <option value="Jupiter">Jupiter</option>
-                <option value="Saturn">Saturn</option>
-                <option value="Uranus">Uranus</option>
-                <option value="Neptune">Neptune</option>
-            </select>
-        </div>
+      <Select type={props.select}/>
+        {/* {(() => {
+        if (props.select == "earth") {
+          return (
+            <h1>Earth</h1>
+          )
+        } else if (props.select == "mercury") {
+          return (
+            <h1>Mercury</h1>
+          )
+        } else if (props.select == "venus") {
+          return (
+            <h1>Venus</h1>
+          )
+        }
+      })()} */}
+      {/* {(() => {
+        switch (props.select) {
+          case "earth":
+            return <h1>Earth</h1>
+            break;
+          case "mercury":
+            return <h1>Mercury</h1>
+            break;
+          case "venus":
+            return <h1>Venus</h1>
+            break;
+        
+          default:
+            return <h1>Earth</h1>
+            break;
+        }
+      })()} */}
         <Card data={props.body}/>
     </div>
   )
