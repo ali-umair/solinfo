@@ -18,35 +18,35 @@ export default function Navbar() {
         <ul>
             <li className="list active">
                 <Link to="/">
-                    <span className="icon"><ion-icon name="planet-outline"></ion-icon></span>
+                    <span className="icon"><img className='w-8 h-8 mt-4 mb-8' src="./planet.png" alt="" /></span>
                     <span className="text">Planets</span>
                 </Link>
             </li>
 
             <li className="list">
                 <Link to="dwarfs">
-                    <span className="icon"><img className='w-8 h-8 mt-4 mb-8' src="./asteroid.png" alt="" /></span>
+                    <span className="icon"><img className='w-6 h-6 mt-6 mb-8' src="./planet.png" alt="" /></span>
                     <span className="text">Dwarfs</span>
                 </Link>
             </li>
 
             <li className="list">
                 <Link to="moons">
-                    <span className="icon"><ion-icon name="chatbubble-outline"></ion-icon></span>
+                    <span className="icon"><img className='w-8 h-8 mt-4 mb-8' src="./moon.png" alt="" /></span>
                     <span className="text">Moons</span>
                 </Link>
             </li>
 
             <li className="list">
                 <Link to="asteroids">
-                    <span className="icon"><ion-icon name="camera-outline"></ion-icon></span>
+                    <span className="icon"><img className='w-8 h-8 mt-4 mb-8' src="./asteroid.png" alt="" /></span>
                     <span className="text">Asteriods</span>
                 </Link>
             </li>
 
             <li className="list">
                 <Link to="comets">
-                    <span className="icon"><ion-icon name="settings-outline"></ion-icon></span>
+                    <span className="icon"><img className='w-8 h-8 mt-4 mb-8' src="./comet.png" alt="" /></span>
                     <span className="text">Comets</span>
                 </Link>
             </li>
