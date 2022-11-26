@@ -18,7 +18,7 @@ export default function Navbar() {
         <ul>
             <li className="list active">
                 <Link to="/">
-                    <span className="icon"><img className='w-8 h-8 mt-4 mb-8' src="./planet.png" alt="" /></span>
+                    <span className="icon"><img className='w-8 h-8 mt-5 mb-8' src="./planet.png" alt="" /></span>
                     <span className="text">Planets</span>
                 </Link>
             </li>
@@ -32,21 +32,21 @@ export default function Navbar() {
 
             <li className="list">
                 <Link to="moons">
-                    <span className="icon"><img className='w-8 h-8 mt-4 mb-8' src="./moon.png" alt="" /></span>
+                    <span className="icon"><img className='w-8 h-8 mt-5 mb-8' src="./moon.png" alt="" /></span>
                     <span className="text">Moons</span>
                 </Link>
             </li>
 
             <li className="list">
                 <Link to="asteroids">
-                    <span className="icon"><img className='w-8 h-8 mt-4 mb-8' src="./asteroid.png" alt="" /></span>
+                    <span className="icon"><img className='w-8 h-8 mt-5 mb-8' src="./asteroid.png" alt="" /></span>
                     <span className="text">Asteriods</span>
                 </Link>
             </li>
 
             <li className="list">
                 <Link to="comets">
-                    <span className="icon"><img className='w-8 h-8 mt-4 mb-8' src="./comet.png" alt="" /></span>
+                    <span className="icon"><img className='w-8 h-8 mt-5 mb-8' src="./comet.png" alt="" /></span>
                     <span className="text">Comets</span>
                 </Link>
             </li>

@@ -3,7 +3,7 @@ import Card from './Card';
 import { useState } from 'react';
 import Select from './Select';
 
-export default function Home(props) {
+function Home(props) {
 
     const Earth = {
         "id": "terre",
@@ -50,40 +50,10 @@ export default function Home(props) {
 
   return (
     <div className='flex flex-col items-center'>
-      <Select type={props.select}/>
-        {/* {(() => {
-        if (props.select == "earth") {
-          return (
-            <h1>Earth</h1>
-          )
-        } else if (props.select == "mercury") {
-          return (
-            <h1>Mercury</h1>
-          )
-        } else if (props.select == "venus") {
-          return (
-            <h1>Venus</h1>
-          )
-        }
-      })()} */}
-      {/* {(() => {
-        switch (props.select) {
-          case "earth":
-            return <h1>Earth</h1>
-            break;
-          case "mercury":
-            return <h1>Mercury</h1>
-            break;
-          case "venus":
-            return <h1>Venus</h1>
-            break;
-        
-          default:
-            return <h1>Earth</h1>
-            break;
-        }
-      })()} */}
-        <Card data={props.body}/>
+      <Select type={props.select} func={selectChange}/>
+      <Card data={body}/>
     </div>
   )
 }
+
+export default Home;

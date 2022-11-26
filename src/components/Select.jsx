@@ -1189,7 +1189,7 @@ export default function Select(props) {
 
   return (
     <div className='w-[300px]'>
-        <select id="select" defaultValue="Choose a planet" className="block py-2.5 px-0 mt-3 mb-3 w-full text-sm text-slate-400 bg-transparent border-b-2 border-green-400 appearance-none focus:outline-none focus:ring-0 focus:border-green-400 peer">
+        <select id="select" defaultValue="Choose a planet" onChange={props.func} className="block py-2.5 px-0 mt-3 mb-3 w-full text-sm text-slate-400 bg-transparent border-b-2 border-green-400 appearance-none focus:outline-none focus:ring-0 focus:border-green-400 peer">
             <option value="Earth">Earth</option>
          </select>
     </div>

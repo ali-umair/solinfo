@@ -1,6 +1,5 @@
-import { useState } from 'react';
-import Home from './components/Home';
-import Navbar from './components/navbar/Navbar';
+import Home from './components/Home'
+import Navbar from './components/navbar/Navbar'
 import {
   HashRouter as Router,
   Routes,
@@ -44,7 +43,7 @@ export default function App() {
   }
 
   return (
-    <div className='bg-[#222327] min-h-screen flex flex-col justify-between'>
+    <div className='bg-[#222327] h-screen flex flex-col justify-between'>
       <Router>
       <Routes>
         <Route exact path="/" element={<Home body={Earth} select="planets" />} />
