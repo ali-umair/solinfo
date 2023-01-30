@@ -84,7 +84,11 @@ export default function Redesign() {
 					</ul>
 				</div>
 				<div className="search_bodies mt-12 flex justify-center">
-					<img src="https://drive.google.com/uc?id=1h3fkjEjsupkVlj_O7hcQPbsZSd3DF46c" alt="search" className="h-10 w-10 shadow-md" />
+					<img
+						src="https://drive.google.com/uc?id=1h3fkjEjsupkVlj_O7hcQPbsZSd3DF46c"
+						alt="search"
+						className="h-10 w-10 shadow-md"
+					/>
 					<input type="text" className="p-2 shadow-md" />
 				</div>
 				<div className="container_bodies mt-14">
@@ -130,6 +134,11 @@ export default function Redesign() {
 							</a>
 						</li>
 					</ul>
+				</div>
+				<div className="theme_selector w-1/4 flex justify-center gap-1 px-2 py-3 absolute bottom-0">
+					<div className="bg-black h-6 w-6 rounded-full hover:scale-110"></div>
+					<div className="bg-red-700 h-6 w-6 rounded-full hover:scale-110"></div>
+					<div className="bg-orange-700 h-6 w-6 rounded-full hover:scale-110"></div>
 				</div>
 			</div>
 			<div className="text-white h-full w-3/4 pt-5 text-center">
