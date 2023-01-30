@@ -12,7 +12,7 @@ export default function Redesign() {
 	};
 
 	return (
-		<div className="bg-black h-screen">
+		<div className="bg-black h-screen flex">
 			<div className="bg-white h-full w-1/4 pt-5 text-center">
 				<button
 					onClick={click}
@@ -83,7 +83,8 @@ export default function Redesign() {
 						</li>
 					</ul>
 				</div>
-				<div className="search_bodies mt-12">
+				<div className="search_bodies mt-12 flex justify-center">
+					<img src="https://drive.google.com/uc?id=1h3fkjEjsupkVlj_O7hcQPbsZSd3DF46c" alt="search" className="h-10 w-10 shadow-md" />
 					<input type="text" className="p-2 shadow-md" />
 				</div>
 				<div className="container_bodies mt-14">
@@ -131,7 +132,9 @@ export default function Redesign() {
 					</ul>
 				</div>
 			</div>
-			<div className=""></div>
+			<div className="text-white h-full w-3/4 pt-5 text-center">
+				<h1>Details</h1>
+			</div>
 		</div>
 	);
 }
