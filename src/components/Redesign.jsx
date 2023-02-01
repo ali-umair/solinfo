@@ -4,6 +4,7 @@ import Search from "./Search";
 import Stars from "./Stars";
 import Theme from "./Theme";
 import Detail from "./Detail";
+import Select from "./Select";
 
 // https://api.le-systeme-solaire.net/rest/bodies?filter[]=isPlanet,eq,true&data=id,name,englishName,isPlanet,moons,desity,gravity,escape,bodyType
 // https://api.le-systeme-solaire.net/rest/bodies/Uranus?data=moons,moon,rel
@@ -11,8 +12,8 @@ import Detail from "./Detail";
 export default function Redesign() {
 	return (
 		<div className="bg-black h-screen flex font-mono">
-			<div className="bg-white h-full w-1/4 pt-5 text-center">
-				<Dropdown />
+			<div className="bg-white text-slate-700 h-full w-1/4 pt-5 text-center">
+				<Select/>
 				<Search />
 				<Stars />
 				<Theme />
