@@ -43,9 +43,10 @@ function Home(props) {
     
     function selectChange() {
       // setBody(event.target.value);
-      fetch(`https://api.le-systeme-solaire.net/rest/bodies/${event.target.value}?data=id,name,englishName,isPlanet,moons,desity,gravity,escape,bodyType`)
-      .then((response) => response.json())
-      .then((data) => setBody(data));
+      // fetch(`https://api.le-systeme-solaire.net/rest/bodies/${event.target.value}?data=id,name,englishName,isPlanet,moons,desity,gravity,escape,bodyType`)
+      // .then((response) => response.json())
+      // .then((data) => setBody(data));
+      console.log(event.target.value);
     }
 
   return (
