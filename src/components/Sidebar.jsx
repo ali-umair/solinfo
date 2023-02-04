@@ -5,19 +5,26 @@ import Theme from "./Theme";
 import Select from "./Select";
 
 export default function Sidebar() {
-	const [type, setType] = useState('planet')
+	const [stars, setStars] = useState("");
 	function selectChange() {
-		// setBody(event.target.value);
-		// fetch(`https://api.le-systeme-solaire.net/rest/bodies/${event.target.value}?data=id,name,englishName,isPlanet,moons,desity,gravity,escape,bodyType`)
-		// .then((response) => response.json())
-		// .then((data) => setBody(data));
-		setType(event.target.value);
+		if (event.target.value) {
+			const type = event.target.value;
+			fetch(
+				`https://api.le-systeme-solaire.net/rest/bodies?filter[]=bodyType,eq,${type}&data=englishName`
+			)
+				.then((response) => response.json())
+				.then((data) => setStars(data))
+				.catch((error) => {
+					console.log(error);
+				});
+		}
+		else setStars("");
 	}
 	return (
 		<>
 			<Select func={selectChange} />
 			<Search />
-			<Stars type={type} />
+			<Stars stars={stars} />
 			<Theme />
 		</>
 	);
