@@ -48,7 +48,7 @@ export default function Stars(props) {
 		} else return <li>Select type of objects</li>;
 	};
 	const click = () => {
-		console.log(event.target.textContent)
+		props.starSelect(event.target.textContent)
 	};
 	return (
 		<div className="container_bodies mt-8">

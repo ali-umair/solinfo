@@ -4,7 +4,7 @@ import Stars from "./Stars";
 import Theme from "./Theme";
 import Select from "./Select";
 
-export default function Sidebar() {
+export default function Sidebar(props) {
 	const [stars, setStars] = useState("");
 	function selectChange() {
 		if (event.target.value) {
@@ -17,14 +17,16 @@ export default function Sidebar() {
 				.catch((error) => {
 					console.log(error);
 				});
-		}
-		else setStars("");
+		} else setStars("");
+	}
+	function starSelect(star) {
+		props.starSelectData(star);
 	}
 	return (
 		<>
 			<Select func={selectChange} />
 			<Search />
-			<Stars stars={stars} />
+			<Stars stars={stars} starSelect={starSelect} />
 			<Theme />
 		</>
 	);
