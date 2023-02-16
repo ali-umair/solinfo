@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import Search from "./Search";
+// import Search from "./Search";
 import Stars from "./Stars";
-import Theme from "./Theme";
+// import Theme from "./Theme";
 import Select from "./Select";
 
 export default function Sidebar(props) {
@@ -25,9 +25,9 @@ export default function Sidebar(props) {
 	return (
 		<>
 			<Select func={selectChange} />
-			{/* <Search /> */}
+			{/* <Search /> */}		{/* For implementation at a later stage */}
 			<Stars stars={stars} starSelect={starSelect} />
-			{/* <Theme /> */}
+			{/* <Theme /> */}		{/* For implementation at a later stage */}
 		</>
 	);
 }
