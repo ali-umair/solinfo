@@ -25,9 +25,9 @@ export default function Sidebar(props) {
 	return (
 		<>
 			<Select func={selectChange} />
-			<Search />
+			{/* <Search /> */}
 			<Stars stars={stars} starSelect={starSelect} />
-			<Theme />
+			{/* <Theme /> */}
 		</>
 	);
 }
