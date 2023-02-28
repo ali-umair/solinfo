@@ -3,15 +3,18 @@ import React from "react";
 export default function Detail(props) {
 	const generateItems = () => {
 		let dataList = [];
-		Object.entries(props.starData).forEach(([key, value]) => {
-			dataList.push(
-				<div className="detail mb-10 flex">
-					<div className="text-red-500 text-center border-r-2 w-44">{key}</div>
-					<div className="text-center w-44">{value}</div>
-				</div>
-			);
-		});
-		return dataList;
+		if (props.starData) {
+			Object.entries(props.starData).forEach(([key, value]) => {
+				dataList.push(
+					<div className="detail mb-10 flex">
+						<div className="text-red-500 text-center border-r-2 w-44">{key}</div>
+						<div className="text-center w-44">{value}</div>
+					</div>
+				);
+			});
+			return dataList;
+		}
+		else return <h1 className="">Select an item from the sidebar</h1>
 	};
 	return (
 		<>
