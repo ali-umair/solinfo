@@ -15,6 +15,8 @@ export default function Redesign() {
 			.then((data) => setStarData(data.bodies[0]))
 			.catch((error) => {
 				console.log(error);
+				// alert("Data not available. Kindly select another.")
+				setStarData({Data: "Missing"})
 			});
 	}
 	return (
