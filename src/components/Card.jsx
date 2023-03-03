@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 // https://api.le-systeme-solaire.net/rest/bodies?filter[]=isPlanet,eq,true&data=id,name,englishName,isPlanet,moons,desity,gravity,escape,bodyType
 // https://api.le-systeme-solaire.net/rest/bodies/Uranus?data=moons,moon,rel
