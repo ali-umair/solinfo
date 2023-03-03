@@ -1,60 +1,32 @@
-import React from 'react';
-import Card from './Card';
-import { useState } from 'react';
-import Select from './Select';
+import React, { useState } from "react";
+import Detail from "./Detail";
+import Sidebar from "./Sidebar";
 
-function Home(props) {
+// https://api.le-systeme-solaire.net/rest/bodies?filter[]=isPlanet,eq,true&data=id,name,englishName,isPlanet,moons,desity,gravity,escape,bodyType
+// https://api.le-systeme-solaire.net/rest/bodies/Uranus?data=moons,moon,rel
 
-    const Earth = {
-        "id": "terre",
-        "name": "La Terre",
-        "englishName": "Earth",
-        "isPlanet": true,
-        "moons": [
-        {}
-        ],
-        "gravity": 9.8,
-        "escape": 11190,
-        "bodyType": "Planet"
-    }
-      // const Mercury = {
-      //   "id": "mercure",
-      //   "name": "Mercure",
-      //   "englishName": "Mercury",
-      //   "isPlanet": true,
-      //   "moons": null,
-      //   "gravity": 3.7,
-      //   "escape": 4250,
-      //   "bodyType": "Planet"
-      // }
-      // const Venus = {
-      //   "id": "venus",
-      //   "name": "Vénus",
-      //   "englishName": "Venus",
-      //   "isPlanet": true,
-      //   "moons": null,
-      //   "gravity": 8.87,
-      //   "escape": 10360,
-      //   "bodyType": "Planet"
-      // }
-    
-    const [body, setBody] = useState(Earth);
-    // const [planets, setPlanets] = useState();
-    
-    function selectChange() {
-      // setBody(event.target.value);
-      // fetch(`https://api.le-systeme-solaire.net/rest/bodies/${event.target.value}?data=id,name,englishName,isPlanet,moons,desity,gravity,escape,bodyType`)
-      // .then((response) => response.json())
-      // .then((data) => setBody(data));
-      console.log(event.target.value);
-    }
-
-  return (
-    <div className='flex flex-col items-center'>
-      <Select type={props.select} func={selectChange}/>
-      <Card data={body}/>
-    </div>
-  )
+export default function Redesign() {
+	const [starData, setStarData] = useState("");
+	function starSelectData(star) {
+		fetch(
+			`https://api.le-systeme-solaire.net/rest/bodies?filter[]=englishName,eq,${star}&exclude=mass,vol,moons,rel,dimension,aroundPlanet,discoveredBy,discoveryDate,alternativeName,isPlanet,bodyType`
+		)
+			.then((response) => response.json())
+			.then((data) => setStarData(data.bodies[0]))
+			.catch((error) => {
+				console.log(error);
+				// alert("Data not available. Kindly select another.")
+				setStarData({Data: "Missing"})
+			});
+	}
+	return (
+		<div className="bg-black h-screen flex font-mono">
+			<div className="bg-white text-slate-700 h-full w-1/4 pt-5 text-center">
+				<Sidebar starSelectData={starSelectData} />
+			</div>
+			<div className="text-white h-full w-3/4 p-5">
+				<Detail starData={starData} />
+			</div>
+		</div>
+	);
 }
-
-export default Home;

@@ -1,5 +1,5 @@
-import Redesign from "./components/Redesign";
+import Home from "./components/Home";
 
 export default function App() {
-  return <Redesign />;
+  return <Home />;
 }
