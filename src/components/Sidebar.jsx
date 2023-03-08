@@ -26,7 +26,7 @@ export default function Sidebar(props) {
   }
   return (
     <>
-      <Select func={selectChange} />
+      <Select selectChange={selectChange} />
       {/* <Search /> */} {/* For implementation at a later stage */}
       <Stars stars={stars} starSelect={starSelect} />
       {/* <Theme /> */} {/* For implementation at a later stage */}
