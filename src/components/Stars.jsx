@@ -3,6 +3,7 @@ import "./stars.css";
 
 export default function Stars(props) {
   const generateStarsList = () => {
+    // This method uses starList from Sidebar and generates and HTML list
     let starsList = [];
     if (props.stars != "") {
       const items = props.stars.bodies;
@@ -17,6 +18,8 @@ export default function Stars(props) {
     } else return <li>Select type of objects</li>;
   };
   const starNameClick = () => {
+    // When star is selected, name is passed to sidebar and then Home.
+    // Home fetches star data and passes it as prop to Detail.
     props.starSelect(event.target.textContent);
   };
   return (

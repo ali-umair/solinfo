@@ -22,6 +22,8 @@ export default function Sidebar(props) {
     } else setStars("");
   }
   function starSelect(star) {
+    // Method for when a star is selected from the list
+    // Passed star to Home where data is fetched and passed to Detail component.
     props.starSelectData(star);
   }
   return (
